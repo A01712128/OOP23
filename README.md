@@ -32,6 +32,7 @@ Para cada palabra tendrá un total de 6 intentos.
 
 Por ahora el código proporcionado en el main.cpp simplemente compila para que el jugador adivine solo 1 palabra la cual es:
 - encapsulamiento
+  
 Cada palabra incorrecta al jugador se le resta 1 intento y al finalizar si el jugador no logra adivinar la palabra se le mostrará la palabra.
 
 ## Librerías del juego
