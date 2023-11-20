@@ -89,6 +89,24 @@ public:
     }
 };
 
+// Definición de la clase Menu
+class Menu {
+public:
+    // Método para mostrar las opciones del menú
+    static void mostrarOpciones() {
+        cout << "1. Jugar al Ahorcado" << endl;
+        cout << "2. Salir" << endl;
+    }
+
+    // Método para obtener la elección del usuario
+    static int obtenerSeleccion() {
+        int opcion;
+        cout << "Ingrese su opcion: ";
+        cin >> opcion;
+        return opcion;
+    }
+};
+
 // Función principal (main) del programa
 int main() {
     // Mensajes de bienvenida y reglas del juego
@@ -98,39 +116,60 @@ int main() {
     cout << "SI LOGRAS ADIVINAR LA PALABRA ANTES DE ACABAR LOS 6 INTENTOS GANARAS EL JUEGO." << endl;
     cout << "MUCHA SUERTE!" << endl;
 
-    // Palabra secreta y nombre del jugador
-    string palabraSecreta = "encapsulamiento";
-    string nombreJugador;
+    bool salir = false;
 
-    // Solicitar al jugador que ingrese su nombre
-    cout << "Ingrese su nombre: ";
-    cin >> nombreJugador;
+    do {
+        Menu::mostrarOpciones();
+        int opcion = Menu::obtenerSeleccion();
 
-    // Crear un objeto Jugador y un objeto JuegoAhorcado
-    Jugador jugador(nombreJugador);
-    JuegoAhorcado juego(palabraSecreta, jugador);
+        switch (opcion) {
+            case 1: {
+                // Palabra secreta y nombre del jugador
+                string palabraSecreta = "encapsulamiento";
+                string nombreJugador;
 
-    // Bucle principal del juego
-    while (!juego.haGanado() && !juego.haPerdido()) {
-        char letra;
-        // Solicitar al jugador que ingrese una letra
-        cout << "Ingrese una letra: ";
-        cin >> letra;
+                // Solicitar al jugador que ingrese su nombre
+                cout << "Ingrese su nombre: ";
+                cin >> nombreJugador;
 
-        // Adivinar la letra y mostrar el estado del juego
-        if (!juego.adivinarLetra(letra)) {
-            cout << "Letra incorrecta." << endl;
+                // Crear un objeto Jugador y un objeto JuegoAhorcado
+                Jugador jugador(nombreJugador);
+                JuegoAhorcado juego(palabraSecreta, jugador);
+
+                // Bucle principal del juego
+                while (!juego.haGanado() && !juego.haPerdido()) {
+                    char letra;
+                    // Solicitar al jugador que ingrese una letra
+                    cout << "Ingrese una letra: ";
+                    cin >> letra;
+
+                    // Adivinar la letra y mostrar el estado del juego
+                    if (!juego.adivinarLetra(letra)) {
+                        cout << "Letra incorrecta." << endl;
+                    }
+
+                    juego.mostrarEstado();
+                }
+
+                // Mostrar mensaje de victoria o derrota
+                if (juego.haGanado()) {
+                    cout << "¡Felicidades, has ganado!" << endl;
+                } else {
+                    cout << "Lo siento, has perdido. La palabra era: " << palabraSecreta << endl;
+                }
+
+                break;
+            }
+            case 2: {
+                salir = true;
+                cout << "¡Hasta luego!" << endl;
+                break;
+            }
+            default:
+                cout << "Opción no valida. Por favor, ingrese una opcion valida." << endl;
+                break;
         }
-
-        juego.mostrarEstado();
-    }
-
-    // Mostrar mensaje de victoria o derrota
-    if (juego.haGanado()) {
-        cout << "¡Felicidades, has ganado!" << endl;
-    } else {
-        cout << "Lo siento, has perdido. La palabra era: " << palabraSecreta << endl;
-    }
+    } while (!salir);
 
     return 0;
 }
