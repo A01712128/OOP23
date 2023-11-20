@@ -17,14 +17,14 @@ Mi juego consta de un total de 10 palabras clave.
  - [ ] Composicion
  - [ ] Objetos
  
-Para ganar el juego el jugador deberá adivinar correctamente las 10 palabras consecutivamente.
+Para ganar el juego el jugador deberá adivinar correctamente la palabra secreta.
 Para cada palabra tendrá un total de 6 intentos.
 
 ## Reglas del juego
 
 - El jugador contará con un total de 6 intentos para adivinar cada palabra.
 - Al finalizar los 6 intentos el juego acabará.
-- Para ganar el juego el jugador deberá adivinar consecutivamente las 10 palabras.
+- Para ganar el juego el jugador deberá adivinar la palabra asignada.
 - Las palabras deben escribirse todas en minúsculas y sin acentos
 
 
