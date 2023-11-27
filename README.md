@@ -30,10 +30,16 @@ Para cada palabra tendrá un total de 6 intentos.
 
 ## Avance del juego
 
-Por ahora el código proporcionado en el main.cpp simplemente compila para que el jugador adivine solo 1 palabra la cual es:
-- encapsulamiento
-  
-Cada palabra incorrecta al jugador se le resta 1 intento y al finalizar si el jugador no logra adivinar la palabra se le mostrará la palabra.
+El código presentado consta de una clase padre la cual es "PalabrasRelacionadas".
+Esta es la clase base de la jerarquía de herencias. Las otras clases no tienen una jerarquía de herencia directa más allá de esta clase base; sin embargo, las clases:
+- "PalabrasOOP"
+- "Jugador"
+- "JuegoAhorcado"
+Utilizan o se relacionan con la clase "PalabrasRelacionadas" de diferentes maneras.
+- "PalabrasOOP" es la clase hija de "PalabrasRelacionadas". (Esta clase tiene un constructor que inicializa la lista de palabras)
+- "Jugador" y "JuegoAhorcado" no heredan de ninguna clase, pero "JuegoAhorcado" utiliza un objeto de tipo "Jugador".
+La clase JuegoAhorcado utiliza un objeto de tipo Jugador a través de una composición. La composición significa que un objeto de una clase es un miembro de otra clase.
+
 
 ## Librerías del juego
 
