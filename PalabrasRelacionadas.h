@@ -1,4 +1,8 @@
+#include <iostream>
+#include <string>
+#include <vector>
 
+using namespace std;
 
 // Definición de una clase base para almacenar palabras relacionadas
 class PalabrasRelacionadas {
