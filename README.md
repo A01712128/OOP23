@@ -35,10 +35,12 @@ Esta es la clase base de la jerarquía de herencias. Las otras clases no tienen 
 - "PalabrasOOP"
 - "Jugador"
 - "JuegoAhorcado"
-  Utilizan o se relacionan con la clase "PalabrasRelacionadas" de diferentes maneras.
+
+Utilizan o se relacionan con la clase "PalabrasRelacionadas" de diferentes maneras.
 - "PalabrasOOP" es la clase hija de "PalabrasRelacionadas". (Esta clase tiene un constructor que inicializa la lista de palabras)
 - "Jugador" y "JuegoAhorcado" no heredan de ninguna clase, pero "JuegoAhorcado" utiliza un objeto de tipo "Jugador".
-  La clase JuegoAhorcado utiliza un objeto de tipo Jugador a través de una composición. La composición significa que un objeto de una clase es un miembro de otra clase.
+
+La clase JuegoAhorcado utiliza un objeto de tipo Jugador a través de una composición. La composición significa que un objeto de una clase es un miembro de otra clase.
 
 
 ## Librerías del juego
