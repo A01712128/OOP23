@@ -1,11 +1,12 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "PalabrasRelacionadas.h"
-#include "PalabrasOOP.h"
-#include "Jugador.h"
-#include "JuegoAhorcado.h"
+#include "PalabraOOP.h"
 #include "Menu.h"
+#include "PalabraRelacionada.h"
+#include "JuegoAhorcado.h"
+#include "Jugador.h"
+
 
 using namespace std;
 
@@ -20,8 +21,8 @@ int main() {
 
     // Inicializacion de variables y juego de palabras relacionadas a OOP
     bool salir = false;
-    PalabrasOOP palabrasOOP;
-    vector<string> palabrasRelacionadas = palabrasOOP.obtenerPalabras();
+    PalabraOOP palabraOOP;
+    vector<string> palabraRelacionada = palabraOOP.obtenerPalabra();
     int indicePalabraActual = 0;
 
     // Ciclo principal del menú
@@ -32,7 +33,7 @@ int main() {
         switch (opcion) {
             // Opcion para jugar al Ahorcado
             case 1: {
-                string palabraSecreta = palabrasRelacionadas[indicePalabraActual];
+                string palabraSecreta = palabraRelacionada[indicePalabraActual];
                 string nombreJugador;
 
                 // Solicitud del nombre del jugador y creacion del objeto Jugador
@@ -65,7 +66,7 @@ int main() {
                 }
 
                 // Actualización del indice de la palabra para el siguiente juego
-                indicePalabraActual = (indicePalabraActual + 1) % palabrasRelacionadas.size();
+                indicePalabraActual = (indicePalabraActual + 1) % palabraRelacionada.size();
 
                 break;
             }
