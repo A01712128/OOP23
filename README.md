@@ -58,3 +58,6 @@ Contiene objetos como `cin` (entrada estándar) y `cout` (salida estándar).
 Avance 2
  - [ ] Utilizo el concepto de herencia en el diagrama de clases de manera adecuada.
 Avance 2
+- Toma de decisiones
+SICT0302A
+(Se revisan en el UML)
