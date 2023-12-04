@@ -51,3 +51,10 @@ Contiene objetos como `cin` (entrada estándar) y `cout` (salida estándar).
 3.  **string:** Para trabajar con objetos de cadena de caracteres (`std::string`).
     
 4.  **vector:** Para utilizar la clase `vector`, que proporciona una implementación de un contenedor dinámico para almacenar elementos.
+
+
+## Revaluacion de Proyecto
+ - [ ] Modelo un diagrama de clase útil para solucionar un problema utilizando UML.
+Avance 2
+ - [ ] Utilizo el concepto de herencia en el diagrama de clases de manera adecuada.
+Avance 2
